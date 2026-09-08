@@ -1,7 +1,7 @@
 # PyRe GPU by JE Horizon
 
-PyRe plans and supervises Python workloads on supported CPU and accelerator
-backends. It does not convert arbitrary CPU code into GPU code.
+PyRe plans and supervises Python workloads on CPU and NVIDIA CUDA in the current
+packaged desktop. It does not convert arbitrary CPU code into GPU code.
 
 [Product and release status](https://pyre.jehorizon.com/)
 
@@ -14,7 +14,9 @@ The Windows developer preview is undergoing final release verification.
 Purchase and application downloads are not open yet. Protected Windows x64
 CPython 3.10–3.13 installs, the PySide6 desktop, CPU concurrency, cancellation and
 crash recovery passed on the test host. NVIDIA CUDA execution and output parity
-passed on an RTX 5070 Ti. Intel and AMD physical GPU validation remains pending.
+passed on an RTX 5070 Ti. Intel XPU and AMD ROCm probes are reference paths for
+future compatibility work; the current packaged desktop cannot schedule those
+backends, and physical Intel and AMD hardware remains NOT_CHECKED.
 
 The introductory price is **$29 USD one time**, for perpetual use of the purchased
 application and compatible v1.x updates. There is no recurring subscription.
@@ -22,7 +24,7 @@ application and compatible v1.x updates. There is no recurring subscription.
 ## What PyRe does
 
 - Queues scripts through a durable local controller and preserves job identities.
-- Runs admitted CPU work concurrently and reserves each selected physical GPU
+- Runs admitted CPU work concurrently and reserves each selected NVIDIA GPU
   for one active job at a time.
 - Checks physical memory, commit, VRAM, disk and supported thermal observations.
 - Shows actual backend selection, captured output, outcomes and receipts in a
