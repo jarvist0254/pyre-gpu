@@ -1,0 +1,35 @@
+name: Application or documentation issue
+description: Report reproducible PyRe behavior without private account data.
+title: "[Issue]: "
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        For billing, download links or security reports, use support@jehorizon.com.
+        Do not attach access tokens, cookies, payment details or application files.
+  - type: input
+    id: release
+    attributes:
+      label: PyRe release
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Windows, Python, CPU/GPU model and actual selected backend.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Use a small synthetic workload where possible.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and observed behavior
+    validations:
+      required: true

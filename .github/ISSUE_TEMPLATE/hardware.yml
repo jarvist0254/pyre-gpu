@@ -1,0 +1,21 @@
+name: Hardware compatibility report
+description: Share a measured CPU or GPU result without private workload data.
+title: "[Hardware]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Do not upload application files, credentials, access links, or private workloads. A device report is not certification of every model in its family."
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Exact configuration
+      description: PyRe release, operating system, Python, GPU model, driver, framework version and selected backend.
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observed result
+      description: Device selected, actual device reported by the workload, output comparison, and any sanitized error.
+    validations:
+      required: true
